@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE knimeNode PUBLIC "-//UNIKN//DTD KNIME Node 2.0//EN" "http://www.knime.org/Node.dtd">
+<knimeNode icon="./DistMatrixGenerator.png" type="Manipulator">
+    <name>DistanceMatrixConverter</name>
+    
+    <shortDescription>
+        Creates a distance matrix from an input data table.
+    </shortDescription>
+    
+    <fullDescription>
+        <intro>Creates a distance matrix from a given input table. The format of the input data should be [x, y, distance] with 
+        x and y being integers and distance as a double value. Please note that this Node assumes that the input data is symetrical,
+        so the distance between two points "X" and "Y" should be identical with the distance between "Y" and "X". Also this node 
+        assumes that the distance between the point "X" and itself should be 0.</intro>
+        
+        <option name="X Column">The Column which should be used as the X Column, must be compatible with the type Integer</option>
+        <option name="Y Column">The Column which should be used as the Y Column, must be compatible with the type Integer</option>
+        <option name="Distance Column">The Column which should be used as the Distance, must be compatible with the type Double</option>
+        
+    </fullDescription>
+    
+    <ports>
+        <inPort index="0" name="In-Port name">A table with three columns. The first two columns must be of the type Integer,
+        the third column must be compatible with the type Double</inPort>
+        <!-- possibly more input ports here-->
+        <outPort index="0" name="Out-Port name">A distance matrix, either triangular or complete, depending on the configuration.</outPort>
+        <!-- possibly more output ports here-->
+    </ports>
+</knimeNode>
