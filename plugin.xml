@@ -3,7 +3,5 @@
 <plugin>   
 	<extension point="org.knime.workbench.repository.nodes">
   		<node category-path="/" factory-class="org.knime.datageneration.coordinate.CoordinatePanelNodeFactory" id="de.unikn.knime.stud.seebacher.coordinatepanel.CoordinatePanelNodeFactory"/>
-   		<node category-path="/" factory-class="de.unikn.knime.stud.seebacher.movinghyperplane.MovingHyperplaneNodeFactory" id="de.unikn.knime.stud.seebacher.movinghyperplane.MovingHyperplaneNodeFactory"/>
-	<node category-path="/" factory-class="de.unikn.knime.stud.seebacher.distancematrixconverter.DistanceMatrixConverterNodeFactory" id="de.unikn.knime.stud.seebacher.distancematrixconverter.DistanceMatrixConverterNodeFactory"/>
  	</extension>
 </plugin>
