@@ -1,7 +1,7 @@
 /*
  * ------------------------------------------------------------------------
  *
- *  Copyright by 
+ *  Copyright by
  *  University of Konstanz, Germany and
  *  KNIME GmbH, Konstanz, Germany
  *  Website: http://www.knime.org; Email: contact@knime.org
@@ -92,7 +92,7 @@ import org.knime.core.node.NotConfigurableException;
 
 /**
  * Custom configuration dialog for the coordinate panel node.
- * 
+ *
  * @author Daniel Seebacher
  */
 public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
@@ -274,7 +274,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
     /**
      * Creates the tab which is added to the NodeDialogPane.
-     * 
+     *
      * @return, a JPanel containing the necessary JSpinners, Buttons and the coordinate panel
      */
     private JPanel createCoordinatePanelSettingsPanel() {
@@ -531,7 +531,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
     /**
      * A coordinate panel which displays points.
-     * 
+     *
      * @author Daniel Seebacher
      */
     static class CoordinatePanel extends JPanel {
@@ -549,7 +549,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Default constructor for the coordinate panel class.
-         * 
+         *
          * @param minY
          *            the minimum y value of the y axis
          * @param maxY
@@ -581,7 +581,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Copy Constructor.
-         * 
+         *
          * @param cp
          *            a CoordinatePanel
          */
@@ -732,7 +732,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Adds a point to the coordinate panel.
-         * 
+         *
          * @param x
          *            x coordinate on the screen
          * @param y
@@ -799,7 +799,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Removes the point nearest to the given coordinates, but only if there is a point nearby.
-         * 
+         *
          * @param x
          *            , x coordinate on the screen
          * @param y
@@ -842,7 +842,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Transforms a point on the screen to a point on the coordinate panel.
-         * 
+         *
          * @param x
          *            , the x coordinate on the screen
          * @param y
@@ -867,7 +867,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Transforms a point in the coordinate panel to a point on the screen.
-         * 
+         *
          * @param x
          *            , the x coordinate in the coordinate panel
          * @param y
@@ -939,7 +939,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Saves the given List of Points, only if they're not already added.
-         * 
+         *
          * @param points
          *            , a List of points
          */
@@ -969,7 +969,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
             this.m_minY = minY;
             repaint();
         }
-        
+
         /**
          * Sets the maximum y value of the y axis.
          * @param maxY the new maximum y value.
@@ -1018,9 +1018,9 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
     /**
      * Representation of a Point, holds the x,y coordinates and a class value.
-     * 
+     *
      * @author Daniel Seebacher
-     * 
+     *
      */
     private static class Point {
         private final double m_x;
@@ -1064,7 +1064,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
             double epsilon = 0.001;
             double distance = euclideanDistance(otherPoint.getX(), this.getX(), otherPoint.getY(), this.getY());
 
-            if (distance > epsilon || otherPoint.getClass() != this.getClass()) {
+            if (distance > epsilon || otherPoint.getPointClass() != this.getPointClass()) {
                 return false;
             }
             return true;
@@ -1096,7 +1096,7 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
         /**
          * Assigns each class a different color, using the excel color set see:
          * (http://dmcritchie.mvps.org/excel/colors.htm | last accessed 18.02.2013).
-         * 
+         *
          * @param pointClass
          *            the class of a point
          * @return
@@ -1114,14 +1114,14 @@ public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 
         /**
          * Turns a hex representation of an RGB color into a color.
-         * 
+         *
          * @param colorStr
          *            a hex representation of a color
          * @return A Color
          */
         private Color hex2Rgb(final String colorStr) {
-            return new Color(Integer.valueOf(colorStr.substring(1, 3), 16), 
-                    Integer.valueOf(colorStr.substring(3, 5), 16), 
+            return new Color(Integer.valueOf(colorStr.substring(1, 3), 16),
+                    Integer.valueOf(colorStr.substring(3, 5), 16),
                     Integer.valueOf(colorStr.substring(5, 7), 16));
         }
     }
