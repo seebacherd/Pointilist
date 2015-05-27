@@ -93,7 +93,7 @@ import org.knime.core.node.NotConfigurableException;
 /**
  * Custom configuration dialog for the coordinate panel node.
  *
- * @author Daniel Seebacher
+ * @author Daniel Seebacher, University of Konstanz.
  */
 public final class CoordinatePanelNodeDialogPane extends NodeDialogPane {
 

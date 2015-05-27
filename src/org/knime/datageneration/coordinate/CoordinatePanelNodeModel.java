@@ -1,7 +1,7 @@
 /*
  * ------------------------------------------------------------------------
  *
- *  Copyright by 
+ *  Copyright by
  *  University of Konstanz, Germany and
  *  KNIME GmbH, Konstanz, Germany
  *  Website: http://www.knime.org; Email: contact@knime.org
@@ -82,9 +82,9 @@ import org.knime.datageneration.coordinate.CoordinatePanelNodeDialogPane.Coordin
 
 /**
  * This is the model implementation of CoordinatePanel.
- * 
- * 
- * @author Daniel Seebacher
+ *
+ *
+ * @author Daniel Seebacher, University of Konstanz.
  */
 public class CoordinatePanelNodeModel extends NodeModel {
 
@@ -174,9 +174,9 @@ public class CoordinatePanelNodeModel extends NodeModel {
     }
 
     /**
-     * This method is used if there is currently no image stored in the configuration. 
+     * This method is used if there is currently no image stored in the configuration.
      * It creates an empty coordinate panel and creates an image of it.
-     * This is necessary because otherwise the PNGImageContent would throw an exception, 
+     * This is necessary because otherwise the PNGImageContent would throw an exception,
      * because it can't work with an empty byte array.
      * @return
      */
@@ -190,7 +190,7 @@ public class CoordinatePanelNodeModel extends NodeModel {
         BufferedImage bi = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = bi.createGraphics();
         cp.paint(g);
-        
+
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
             ImageIO.write(bi, "PNG", baos);

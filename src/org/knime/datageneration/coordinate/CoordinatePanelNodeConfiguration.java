@@ -1,7 +1,7 @@
 /*
  * ------------------------------------------------------------------------
  *
- *  Copyright by 
+ *  Copyright by
  *  University of Konstanz, Germany and
  *  KNIME GmbH, Konstanz, Germany
  *  Website: http://www.knime.org; Email: contact@knime.org
@@ -54,8 +54,8 @@ import org.knime.core.node.NodeSettingsWO;
 /**
  * Configuration object for a coordinate panel. See org.knime.base.node.meta.looper.LoopEndJoinNodeConfiguration.class
  * for reference
- * 
- * @author Daniel Seebacher
+ *
+ * @author Daniel Seebacher, University of Konstanz.
  */
 public class CoordinatePanelNodeConfiguration {
 
@@ -78,10 +78,9 @@ public class CoordinatePanelNodeConfiguration {
     private int m_imageWidth = 800;
     private byte[] m_image = new byte[0];
 
-
     /**
      * Save current config.
-     * 
+     *
      * @param settings
      *            To save to.
      */
@@ -102,7 +101,7 @@ public class CoordinatePanelNodeConfiguration {
 
     /**
      * Load in NodeModel.
-     * 
+     *
      * @param settings
      *            To load from.
      * @throws InvalidSettingsException
@@ -125,7 +124,7 @@ public class CoordinatePanelNodeConfiguration {
 
     /**
      * Load in Dialog.
-     * 
+     *
      * @param settings
      *            To load from.
      */
@@ -142,7 +141,7 @@ public class CoordinatePanelNodeConfiguration {
         m_imageWidth = settings.getInt("imageWidth", m_imageWidth);
         m_imageHeight = settings.getInt("imageHeight", m_imageHeight);
         m_image = settings.getByteArray("image", m_image);
-   }
+    }
 
     /**
      * @return the m_minY
@@ -300,22 +299,25 @@ public class CoordinatePanelNodeConfiguration {
     int getImageWidth() {
         return m_imageWidth;
     }
-    
+
     /**
-     * @param newWidth the new width of the image
+     * @param newWidth
+     *            the new width of the image
      */
     void setImageWidth(final int newWidth) {
         this.m_imageWidth = newWidth;
     }
+
     /**
      * @return the image height
      */
     int getImageHeight() {
         return m_imageHeight;
     }
-    
+
     /**
-     * @param newHeight the new height of the image
+     * @param newHeight
+     *            the new height of the image
      */
     void setImageHeight(final int newHeight) {
         this.m_imageHeight = newHeight;

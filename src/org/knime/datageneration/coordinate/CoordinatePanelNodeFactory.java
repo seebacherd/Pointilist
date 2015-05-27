@@ -1,7 +1,7 @@
 /*
  * ------------------------------------------------------------------------
  *
- *  Copyright by 
+ *  Copyright by
  *  University of Konstanz, Germany and
  *  KNIME GmbH, Konstanz, Germany
  *  Website: http://www.knime.org; Email: contact@knime.org
@@ -53,9 +53,9 @@ import org.knime.core.node.NodeView;
 
 /**
  * <code>NodeFactory</code> for the "CoordinatePanel" Node.
- * 
- * 
- * @author Daniel Seebacher
+ *
+ *
+ * @author Daniel Seebacher, University of Konstanz.
  */
 public class CoordinatePanelNodeFactory extends NodeFactory<CoordinatePanelNodeModel> {
 
